@@ -1,5 +1,6 @@
 package k2.toka.web;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.stereotype.Controller;
@@ -10,8 +11,7 @@ import java.util.*;
 @Controller
 public class MyController {
 	
-
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	@GetMapping("/hello")
 	public String sayHello(Model model) {
 		
 		List<Student> students = new ArrayList<>();

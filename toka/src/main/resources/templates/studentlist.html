@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
 </head>
-<body>
-
-</body>
+	<body>
+		<p>Welcome to Haaga-Helia!</p>
+		<div th:each="student: ${students}">
+			<p><span th:text="${student.firstName}"></span> <span th:text="${student.lastName}"></span></p>
+		</div>
+	</body>
 </html>
